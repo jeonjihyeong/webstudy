@@ -13,7 +13,21 @@ function clickEvent(){
         id : id,
         pw : pw
     }).then((res)=>{
-        console.log(res)
+        if(res.data==='failid'){
+            clearValue();
+            alert('아이디 잘못');
+            return;
+        }
+        if(res.data === 'failpw') {
+            clearValue();
+            alert('패스워드 잘못');
+            return;
+        }
+        if(res.data === 'success') {
+            alert('로그인 성공');
+            clearValue();
+            return;
+        }
     })
     .catch((error)=>{
         console.log("에러 발생 :", error);
