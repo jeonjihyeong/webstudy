@@ -14,7 +14,6 @@ function clickEvent(){
         pw : pw
     }).then((res)=>{
         console.log(res.data);
-        
     })
     .catch((error)=>{
         console.log("에러 발생 :", error);
