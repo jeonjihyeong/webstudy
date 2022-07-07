@@ -19,12 +19,11 @@ app.use(cors());
 // })
 
 app.post('/signup',async(req,res)=>{
+  console.log(1)
   const result = await service.saveUser('bv','bv')
   console.log(result)
 })
 
-// 중복체크, 회원가입시 id 중복체크, db pkfk로 관계 확실히 알기, js 문법, 
-// 
 // app.get('/id/:id',(req,res)=>{
 //   console.log(req.params)
 //   res.send(db)
